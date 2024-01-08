@@ -13,6 +13,8 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import router from '@/router'
 // @ts-ignore
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
+import './assets/main.css'
+
 
 const app = createApp(App);
 
