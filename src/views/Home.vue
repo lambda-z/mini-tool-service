@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     background-color:darkslategrey;
-    width: 200%;
+    width: 193%;
     height: 100%">
 
     <div style="width: 80%">
@@ -31,6 +31,7 @@
         <el-button type="primary" @click="collect">
             Collect
         </el-button>
+        <el-button @click="copyToClipboard">复制到剪贴板</el-button>
     </el-card>
 
 
@@ -78,11 +79,21 @@
 
 <script setup lang="ts">
 import {ref} from "vue";
+import Clipboard from 'clipboard';
 
-
-const count = ref(5);
-const tableName = ref("");
+const count = ref(2);
+const tableName = ref("user");
 const result = ref("");
+
+const copyToClipboard = () => {
+    const textarea = document.createElement('textarea');
+    textarea.value = result.value;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    console.log('已复制到剪贴板');
+}
 
 const columns = ref([
     {
@@ -148,7 +159,10 @@ const collect = () => {
     result.value = "CREATE TABLE " + "<span style='color: #646cff'>" + tableName.value + "</span>" + " (\n"
 
     for (let i = 0; i < data.length; i++) {
-        result.value += "<p style='text-indent: 2em;'>    " + data[i].field + " " + data[i].type +  ";</p>";
+        if (data[i].type == 'varchar')
+            result.value += "<p style='text-indent: 2em;'>    " + data[i].field + " " + data[i].type + "(" + data[i].length + "),</p>";
+        else
+            result.value += "<p style='text-indent: 2em;'>    " + data[i].field + " " + data[i].type +  ",</p>";
     }
 
     result.value += ");"
