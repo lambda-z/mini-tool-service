@@ -8,31 +8,29 @@
 
     <div style="width: 80%">
 
-    <el-card style="margin-top: 15px; height: 350px; width: 100%">
-        <div style="height: 100%; background-color: #2c3e50">
-            <el-input v-model="result"
-                      type="textarea"
-                      rows="15">
-            </el-input>
+    <el-card style="margin-top: 15px; height: 360px; width: 100%">
+        <div style="height: 100%; background-color: whitesmoke">
+<!--            <el-input v-model="result"-->
+<!--                      type="textarea"-->
+<!--                      rows="15"-->
+<!--                      style="border-radius: 8px"-->
+<!--            >-->
+<!--            </el-input>-->
+            <div v-html="result" style="height: 320px; align-content: flex-start"></div>
         </div>
     </el-card>
 
     <el-card style="display: flex; flex-direction: row;  margin-bottom: 15px; margin-top: 15px">
-
         <el-input v-model="count" style="width: 100px; margin-right: 10px;">
         </el-input>
-
-        <el-input v-model="name" style="width: 100px; margin-right: 10px;">
+        <el-input v-model="tableName" style="width: 100px; margin-right: 10px;">
         </el-input>
-
         <el-button type="primary" @click="generate">
             Generate
         </el-button>
-
         <el-button type="primary" @click="collect">
             Collect
         </el-button>
-
     </el-card>
 
 
@@ -71,7 +69,6 @@
                 </div>
 
             </div>
-
         </div>
     </el-card>
 
@@ -84,7 +81,7 @@ import {ref} from "vue";
 
 
 const count = ref(5);
-const name = ref("");
+const tableName = ref("");
 const result = ref("");
 
 const columns = ref([
@@ -148,10 +145,13 @@ const collect = () => {
     }
     console.log(data);
     // result.value = JSON.stringify(data);
-    result.value = "";
+    result.value = "CREATE TABLE " + "<span style='color: #646cff'>" + tableName.value + "</span>" + " (\n"
+
     for (let i = 0; i < data.length; i++) {
-        result.value += "INSERT INTO " + name.value + data[i].field + " " + data[i].type + "(" + data[i].length + ")" + ",\n";
+        result.value += "<p>" + data[i].field + " " + data[i].type +  "</p>";
     }
+
+    result.value += ");"
 }
 
 
