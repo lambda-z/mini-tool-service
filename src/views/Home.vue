@@ -38,14 +38,18 @@
                 <div style="display: flex; flex-direction: row; margin-bottom: 10px">
                     <div style="margin-right: 10px; width: 210px">
                         <el-input v-model="item.field">
-
                         </el-input>
 
                     </div>
                     <div style="margin-right: 10px; width: 210px">
-                        <el-input v-model="item.type">
-
-                        </el-input>
+                        <el-select v-model="item.type" filterable>
+                            <el-option
+                                v-for="item in types"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value"
+                            />
+                        </el-select>
                     </div>
                     <div style="margin-right: 10px; width: 210px">
                         <el-input v-model="item.length">
@@ -92,6 +96,21 @@ const columns = ref([
     },
     {
         label: "Length",
+    },
+])
+
+const types = ref([
+    {
+        label: "int",
+        value: "int",
+    },
+    {
+        label: "varchar",
+        value: "varchar",
+    },
+    {
+        label: "datetime",
+        value: "datetime",
     },
 ])
 
