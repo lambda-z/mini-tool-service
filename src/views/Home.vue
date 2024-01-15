@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     background-color:darkslategrey;
-    width: 193%;
+    width: 200%;
     height: 100%">
 
     <div style="width: 80%">
