@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // @ts-ignore
 import Home from '@/views/Home.vue';
+import MDEditor from "../views/MDEditor.vue";
 
 // @ts-ignore
 const routes = [
@@ -10,6 +11,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/md',
+    name: 'md',
+    component: MDEditor
   },
 ]
 
