@@ -1,8 +1,11 @@
 <template>
 
-    <h2>
-        字段设置
-    </h2>
+    <el-card style="margin-top: 15px; height: 350px;">
+        <div style="height: 100%; background-color: #2c3e50">
+            <el-input v-model="result" type="textarea" rows="15" style="background-color: #213547">
+            </el-input>
+        </div>
+    </el-card>
 
     <el-card style="display: flex; flex-direction: row;  margin-bottom: 15px; margin-top: 15px">
 
@@ -53,7 +56,6 @@
                     </div>
                     <div style="margin-right: 10px; width: 210px">
                         <el-input v-model="item.length">
-
                         </el-input>
                     </div>
                 </div>
@@ -62,19 +64,6 @@
 
         </div>
     </el-card>
-
-    <el-card style="margin-top: 15px; height: 400px">
-        <d-code-editor
-            v-model="result"
-            auto-height="true"
-            :options="{ language: 'json' }"
-            style="align-items: flex-start;"
-            arco-theme="dark"
-        >
-
-        </d-code-editor>
-    </el-card>
-
 
 
 </template>
