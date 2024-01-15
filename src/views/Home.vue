@@ -1,8 +1,18 @@
 <template>
+    <div style="display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:darkslategrey;
+    width: 200%;
+    height: 100%">
 
-    <el-card style="margin-top: 15px; height: 350px;">
+    <div style="width: 80%">
+
+    <el-card style="margin-top: 15px; height: 350px; width: 100%">
         <div style="height: 100%; background-color: #2c3e50">
-            <el-input v-model="result" type="textarea" rows="15" style="background-color: #213547">
+            <el-input v-model="result"
+                      type="textarea"
+                      rows="15">
             </el-input>
         </div>
     </el-card>
@@ -65,7 +75,8 @@
         </div>
     </el-card>
 
-
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
