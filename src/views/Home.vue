@@ -148,7 +148,7 @@ const collect = () => {
     result.value = "CREATE TABLE " + "<span style='color: #646cff'>" + tableName.value + "</span>" + " (\n"
 
     for (let i = 0; i < data.length; i++) {
-        result.value += "<p>" + data[i].field + " " + data[i].type +  "</p>";
+        result.value += "<p style='text-indent: 2em;'>    " + data[i].field + " " + data[i].type +  ";</p>";
     }
 
     result.value += ");"
