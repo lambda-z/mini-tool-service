@@ -16,7 +16,7 @@
 <!--                      style="border-radius: 8px"-->
 <!--            >-->
 <!--            </el-input>-->
-            <div v-html="result" style="height: 320px; align-content: flex-start"></div>
+            <div v-html="result" style="height: 320px; text-align: left"></div>
         </div>
     </el-card>
 
