@@ -6,6 +6,10 @@
     width: 200%;
     height: 100%">
 
+        <h1 style="color: white; font-family: 'JetBrains Mono'">
+            MINI TOOL
+        </h1>
+
     <div style="width: 80%">
 
     <el-card style="margin-top: 15px; height: 360px; width: 100%">
