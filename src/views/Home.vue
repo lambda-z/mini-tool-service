@@ -96,7 +96,7 @@ const copyToClipboard = () => {
     textarea.select();
     document.execCommand('copy');
     document.body.removeChild(textarea);
-    console.log('已复制到剪贴板');
+    console.log('Copy');
 }
 
 const columns = ref([
