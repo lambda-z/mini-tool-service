@@ -1,7 +1,7 @@
 <template>
   <div id="global-main">
     <div id="header">
-
+        <h1>Magical Card</h1>
     </div>
 
     <div id="body">
