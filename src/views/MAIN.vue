@@ -26,12 +26,20 @@
   background-color: whitesmoke;
 
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #header {
-  width: 200%;
+  width: 100%;
   height: 30%;
   background-color: #F3FEB0;
+}
+
+#body {
+  width: 80%;
+  background-color: forestgreen;
+
 }
 
 </style>
