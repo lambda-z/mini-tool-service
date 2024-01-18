@@ -19,7 +19,7 @@ const routes = [
     component: MDEditor
   },
   {
-    path: '/',
+    path: '/main',
     name: 'main',
     component: Main
   },
