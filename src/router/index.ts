@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 // @ts-ignore
 import Home from '@/views/Home.vue';
 import MDEditor from "../views/MDEditor.vue";
+import Main from "../views/MAIN.vue";
 
 // @ts-ignore
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
     path: '/md',
     name: 'md',
     component: MDEditor
+  },
+  {
+    path: '/',
+    name: 'main',
+    component: Main
   },
 ]
 
