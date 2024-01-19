@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/Home.vue';
 import MDEditor from "../views/MDEditor.vue";
 import Main from "../views/MAIN.vue";
+import Github from "../views/Github.vue";
 
 // @ts-ignore
 const routes = [
@@ -22,6 +23,11 @@ const routes = [
     path: '/main',
     name: 'main',
     component: Main
+  },
+  {
+    path: '/github',
+    name: 'github',
+    component: Github
   },
 ]
 

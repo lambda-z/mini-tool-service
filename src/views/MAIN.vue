@@ -38,7 +38,10 @@
 
 #body {
   width: 80%;
-  background-color: forestgreen;
+  height: 100%;
+  /*background-color: forestgreen;*/
+
+  border: 1px solid black;
 
 }
 
